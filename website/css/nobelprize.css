@@ -1,0 +1,71 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+body {
+  background-color: #4d4b4b;
+  font-family: "Poppins", sans-serif;
+  margin: 0;  
+}
+
+.navbar {
+  background-color: #161616;
+  font-size: xx-large;
+  padding: 20px;
+}
+
+.navbar a {
+  color: white;
+}
+
+.year-selector {
+  color: #9a9ba8;
+  width: 100%;
+  border: 4px dotted red;
+  align-content: center;
+}
+
+.year-selector input {
+  width: 500px;
+  
+}
+
+.nobel-prize-title {
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.prize-year {
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+}
+
+.prize-motivation {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: medium;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #9a9ba8;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  margin: 0 5px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-body {
+  padding: 10px;
+}
