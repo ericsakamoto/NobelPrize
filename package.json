@@ -1,0 +1,26 @@
+{
+  "name": "nobelprize",
+  "version": "1.0.0",
+  "description": "Physics Nobel Prize API Visualizer",
+  "main": "batch/index.js",
+  "dependencies": {
+    "googleapis": "^60.0.1",
+    "image-downloader": "^4.0.1",
+    "node-fetch": "^2.6.1",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericsakamoto/NobelPrize.git"
+  },
+  "author": "Eric Sakamoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericsakamoto/NobelPrize/issues"
+  },
+  "homepage": "https://github.com/ericsakamoto/NobelPrize#readme"
+}
