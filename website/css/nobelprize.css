@@ -86,8 +86,29 @@ body {
   font-weight: bold;
 }
 
-.card-text {
+.card-motivation {
   font-size: small;
+}
+
+.card-birth {
+  font-size: small;
+  padding-left: 9px;
+}
+
+.card-death {
+  font-size: small;
+  padding-left: 11px;
+  margin-right: 10px;
+}
+
+.card-affiliation {
+  font-size: small;
+  padding-left: 10px;
+}
+
+.card-country {
+  font-size: small;
+  padding-left: 10px;
 }
 
 .card-message {

@@ -73,7 +73,13 @@ async function getLaureate(id,awardYear,cards) {
 }
 
 function showLaureate(laureate,cards,id,awardYear) {
-  //console.log(laureate);
+  console.log(laureate);
+
+  let birth = laureate[0].birth.date;
+  let death = 'death' in laureate[0] ? laureate[0].death.date : "";
+  let motivation = laureate[0].nobelPrizes[0].motivation.en;
+  let affiliation = 'affiliations' in laureate[0].nobelPrizes[0] ? laureate[0].nobelPrizes[0].affiliations[0].name.en : "";
+  let country = affiliation != "" ? laureate[0].nobelPrizes[0].affiliations[0].country.en : "";
 
   const card = document.createElement("div");
   card.classList.add("card");
@@ -83,9 +89,42 @@ function showLaureate(laureate,cards,id,awardYear) {
       <div class="card-title">
         ${laureate[0].knownName.en}
     </div>
-    <p class="card-text">${laureate[0].nobelPrizes[0].motivation.en}</p>
-  </div>
+    <p class="card-motivation">${motivation}</p>
   `;
+
+  const cardbirth = document.createElement("p");
+  cardbirth.classList.add("card-birth");
+  cardbirth.innerHTML = `
+    <span style="font-size: 15px; color: black; margin-right: 5px;">
+      <i class="fas fa-star"></i>
+    </span>
+    ${birth}
+  `;
+  card.appendChild(cardbirth);
+
+  const carddeath = document.createElement("p");
+  carddeath.classList.add("card-death");
+  carddeath.innerHTML = `
+    <span style="font-size: 15px; color: black; margin-right: 5px;">
+      <i class="fas fa-cross"></i>
+    </span>
+    ${death}
+  `;
+  death != "" ? card.appendChild(carddeath) : "";
+
+  const cardaffiliation = document.createElement("p");
+  cardaffiliation.classList.add("card-affiliation");
+  cardaffiliation.innerHTML = `
+    ${affiliation}
+  `;
+  affiliation != "" ? card.appendChild(cardaffiliation) : "";
+
+  const cardcountry = document.createElement("p");
+  cardcountry.classList.add("card-country");
+  cardcountry.innerHTML = `
+    ${country}
+  `;
+  country != "" ? card.appendChild(cardcountry) : "";
 
   cards.appendChild(card);
 }
